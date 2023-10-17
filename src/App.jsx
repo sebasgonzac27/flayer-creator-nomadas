@@ -6,7 +6,7 @@ import { useRef } from 'react'
 import { toJpeg } from 'html-to-image'
 
 const defaultData = {
-  image: "https://img.freepik.com/foto-gratis/hombre-vista-lateral-motocicleta_23-2150868420.jpg?size=626&ext=jpg&ga=GA1.1.534568101.1691172338&semt=sph",
+  image: "https://cdn.shopify.com/s/files/1/0608/7819/2888/files/kawasaki-ninja-2023.jpg?v=1674124860",
   typeEvent: 1,
   cityEvent: 1,
   title: "Titulo Primario",
