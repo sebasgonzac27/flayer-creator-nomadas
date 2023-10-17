@@ -42,6 +42,14 @@ export function Form({ handleData }) {
     handleData(data)
   }
 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setData((prevData) => ({
+      ...prevData,
+      image: URL.createObjectURL(file)
+    }))
+  }
+
   return (
     <>
       <form className="form" onSubmit={handleSubmit}>
@@ -90,7 +98,7 @@ export function Form({ handleData }) {
 
         <label>
           Imagen de fondo:
-          <input name="image" type="url" onChange={handleChange} required />
+          <input name="image" type="file" accept="image/*" onChange={handleImageChange} required />
         </label>
 
         <button type="submit">Generar</button>

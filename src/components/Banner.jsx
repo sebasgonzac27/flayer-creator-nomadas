@@ -6,7 +6,7 @@ import watch from '../assets/icons/watch.svg'
 import whatsapp from '../assets/icons/whatsapp.svg'
 import typesBD from '../database/types.json'
 import locationsBD from '../database/locations.json'
-import React, { useState, useEffect } from 'react';
+
 export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPlace, date, hour }) {
 
     const type = typesBD.find(type => type.id === parseInt(typeEvent)) ?? typesBD.at(0)
@@ -28,26 +28,6 @@ export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPl
     // Obtener el nombre del mes
     const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     const month = (months[eventDate.getMonth()] || 'Mes').toUpperCase();
-
-    const [backgroundImage, setBackgroundImage] = useState(null);
-
-    useEffect(() => {
-        // Descargar la imagen de fondo y almacenarla en el estado local
-        const downloadBackgroundImage = async () => {
-            try {
-                const response = await fetch(image);
-                if (response.ok) {
-                    const blob = await response.blob();
-                    const objectURL = URL.createObjectURL(blob);
-                    setBackgroundImage(objectURL);
-                }
-            } catch (error) {
-                console.error('Error al descargar la imagen de fondo:', error);
-            }
-        };
-
-        downloadBackgroundImage();
-    }, [image]);
 
     const handleDownload = () => {
         const bannerElement = document.getElementById('banner');
@@ -80,18 +60,18 @@ export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPl
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
-                    backgroundImage: `url(${backgroundImage})`,
+                    backgroundImage: `url(${image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
-                    
-                }}/>
+
+                }} />
                 <div style={{
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
-                    backgroundColor: '#000000a5',
-                    
+                    backgroundColor: '#000000c3',
+
                 }}></div>
 
                 <img src={`/src/assets/backgrounds/${type.background}`} alt={type.background} className='paper' />
@@ -147,7 +127,7 @@ export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPl
                     <h3>{month}</h3>
                 </div>
             </section>
-            
+
         </div>
 
     )

@@ -2,8 +2,6 @@ import { useState } from 'react'
 import './App.css'
 import { Banner } from './components/Banner'
 import { Form } from './components/Form'
-import { useRef } from 'react'
-import { toJpeg } from 'html-to-image'
 
 const defaultData = {
   image: "https://cdn.shopify.com/s/files/1/0608/7819/2888/files/kawasaki-ninja-2023.jpg?v=1674124860",
