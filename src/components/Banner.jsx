@@ -4,16 +4,16 @@ import colFlag from '/assets/flags/colombia_flag.jpg'
 import map from '/assets/icons/map.svg'
 import watch from '/assets/icons/watch.svg'
 import whatsapp from '/assets/icons/whatsapp.svg'
-import typesBD from '/src/database/types.json'
-import locationsBD from '/src/database/locations.json'
+import typesBD from '/src/database/types.js'
+import locationsBD from '/src/database/locations.js'
 
 export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPlace, date, hour }) {
 
     const type = typesBD.find(type => type.id === parseInt(typeEvent)) ?? typesBD.at(0)
     const city = locationsBD.find(location => location.id === parseInt(cityEvent)) ?? locationsBD.at(0)
 
-    const cityImage = '../../assets/flags/' + city.flag
-    const typeImage = '../../assets/backgrounds/' + type.background
+    const cityImage = city.flag
+    const typeImage = type.background
 
     const upperTitle = title.toUpperCase()
     const upperSubtitle = subtitle.toUpperCase()
@@ -77,12 +77,12 @@ export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPl
 
                 }}></div>
 
-                <img src={typeImage} alt={type.background} className='paper' />
+                <img src={typeImage} alt={type.name} className='paper' />
                 <img src={logo} className='logo' />
                 <h2 className='title-club'>NÓMADAS URBANOS</h2>
                 <div className='flags'>
                     <img src={colFlag} className='country' />
-                    <img src={cityImage} alt={city.flag} className='country' />
+                    <img src={cityImage} alt={city.name} className='country' />
                 </div>
                 <div className='tags'>
                     <div className='tag tag-left'>

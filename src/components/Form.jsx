@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import typesDB from '../database/types.json'
-import locationsDB from '../database/locations.json'
+import typesDB from '../database/types.js'
+import locationsDB from '../database/locations.js'
 
 
 
