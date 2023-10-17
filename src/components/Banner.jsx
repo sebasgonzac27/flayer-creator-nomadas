@@ -1,9 +1,9 @@
-import logo from '/src/assets/icons/logo.svg'
+import logo from '/assets/icons/logo.svg'
 import html2canvas from 'html2canvas';
-import colFlag from '/src/assets/flags/colombia_flag.jpg'
-import map from '/src/assets/icons/map.svg'
-import watch from '/src/assets/icons/watch.svg'
-import whatsapp from '/src/assets/icons/whatsapp.svg'
+import colFlag from '/assets/flags/colombia_flag.jpg'
+import map from '/assets/icons/map.svg'
+import watch from '/assets/icons/watch.svg'
+import whatsapp from '/assets/icons/whatsapp.svg'
 import typesBD from '/src/database/types.json'
 import locationsBD from '/src/database/locations.json'
 
@@ -12,8 +12,8 @@ export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPl
     const type = typesBD.find(type => type.id === parseInt(typeEvent)) ?? typesBD.at(0)
     const city = locationsBD.find(location => location.id === parseInt(cityEvent)) ?? locationsBD.at(0)
 
-    const cityImage = '/src/assets/flags/' + city.flag
-    const typeImage = '/src/assets/backgrounds/' + type.background
+    const cityImage = '/assets/flags/' + city.flag
+    const typeImage = '/assets/backgrounds/' + type.background
 
     const upperTitle = title.toUpperCase()
     const upperSubtitle = subtitle.toUpperCase()
