@@ -345,7 +345,7 @@ body {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        margin-top: -220px;
+        
         
         .download-button{
           width: 200px;
@@ -364,9 +364,10 @@ body {
   body {
     .main {
       .container {
+        margin-top: -120px;
         .download-button{
           width: 200px;
-          margin-top: -120px;
+          margin-top: -100px;
         }
         .banner-box {
           transform: scale(0.67);
@@ -400,7 +401,18 @@ body {
           margin-top: -120px;
         }
         .banner-box {
-          transform: scale(0.55);
+          transform: scale(0.5);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 340px) {
+  body {
+    .main {
+      .container {
+        .banner-box {
+          transform: scale(0.47);
         }
       }
     }
