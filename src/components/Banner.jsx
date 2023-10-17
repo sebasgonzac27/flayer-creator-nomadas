@@ -1,10 +1,10 @@
-import logo from '../assets/icons/logo.svg'
+import logo from '/src/assets/icons/logo.svg'
 import html2canvas from 'html2canvas';
-import colFlag from '../assets/flags/colombia_flag.jpg'
-import map from '../assets/icons/map.svg'
-import watch from '../assets/icons/watch.svg'
-import whatsapp from '../assets/icons/whatsapp.svg'
-import typesBD from '../database/types.json'
+import colFlag from '/src/assets/flags/colombia_flag.jpg'
+import map from '/src/assets/icons/map.svg'
+import watch from '/src/assets/icons/watch.svg'
+import whatsapp from '/src/assets/icons/whatsapp.svg'
+import typesBD from '/src/database/types.json'
 import locationsBD from '../database/locations.json'
 
 export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPlace, date, hour }) {
