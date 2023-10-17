@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-family: 'Big Shoulders Display', sans-serif;
+
+  .header {
+    height: 70px;
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+  }
+
+  .footer {
+    height: 30px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 1.3rem;
+  }
+  .main{
+    height: calc(100vh - (70px + 30px));
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 450px;
+      gap:10px;
+    }
+  
+    .form label {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+    }
+
+    .form input{
+      padding: 10px;
+      border: none;
+      background-color: rgb(234, 234, 234);
+      border-radius: 3px;
+    }
+
+    .form select {
+      padding: 10px;
+      border: none;
+      background-color: rgb(234, 234, 234);
+      border-radius: 3px;
+    }
+
+    .form button{
+      padding: 10px;
+      font-weight: bold;
+      background-color: #ff5d00;
+      border: none;
+      color: white;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .form button:hover{
+      background-color: #d04c00;
+    }
+
+    .banner-box {
+      height: calc(80vh - 70px);
+      width: calc(80vh - 70px);
+      position: relative;
+
+      .paper {
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        filter: brightness(0.9);
+      }
+
+      .background {
+        object-fit: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        filter: grayscale(1) brightness(0.5);
+      }
+
+      .logo {
+        position: absolute;
+        height: 13%;
+        width: 13%;
+        z-index: 3;
+        top: 10px;
+        left: 15px;
+      }
+
+      .title-club {
+        position: absolute;
+        z-index: 3;
+        color: white;
+        top: 28px;
+        left: 135px;
+        font-size: 3rem;
+        font-weight: 900;
+      }
+
+      .flags {
+        position: absolute;
+        height: 60px;
+        width: 40px;
+        z-index: 3;
+        top: 10px;
+        right: 15px;
+
+        .country {
+          height: 50%;
+          width: 100%;
+          border: 2px solid white;
+          border-radius: 3px;
+        }
+      }
+
+      .tags {
+        position: absolute;
+        z-index: 2;
+        top: 23%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 45px;
+        align-items: center;
+
+        .tag {
+          background-color: black;
+          height: 100%;
+          padding: 0px 10px;
+          color: #fcd612;
+          font-weight: 800;
+          font-size: 1.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 3px solid white;
+        }
+
+        .tag-left {
+          border-left: 0;
+          border-radius: 0 5px 5px 0;
+        }
+
+        .tag-right {
+          border-right: 0;
+          border-radius: 5px 0 0 5px;
+        }
+      }
+
+      .center-title {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        width: 75%;
+        transform: translate(-50%, -50%);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .primary-title {
+          
+          .title {
+            font-family: 'Black Ops One', sans-serif;
+            font-size: 5rem;
+            line-height: 4rem;
+            text-align: center;
+            font-weight: 400;
+          }
+        }
+
+        .secondary-title {
+          .subtitle {
+            color: #ff5d00;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+          }
+        }
+      }
+
+      .info-event {
+        position: absolute;
+        z-index: 3;
+        bottom: 8%;
+        left: 25px;
+        display: flex;
+        gap: 30px;
+        color: white;
+        font-size: 1.3rem;
+
+        .place {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap:15px;
+          .map-icon {
+            height: 50px;
+          }
+        }
+
+        .time {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+
+          .watch-icon {
+            height: 50px;
+          }
+        }
+      }
+
+      .confirm {
+        position: absolute;
+        z-index: 3;
+        bottom: 10px;
+        display: flex;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        .whatsapp-icon {
+          height: 23px;
+        }
+      }
+
+      .date-info {
+        position: absolute;
+        z-index: 3;
+        bottom: 1%;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        line-height: 2.8rem;
+      }
+
+      .date-info h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+      }
+
+      .date-info h1 {
+        padding: 0;
+        font-size: 4rem;
+        font-weight: 900;
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 768px) {
+  body {
+    .main {
+      flex-direction: column;
+
+      .banner-box {
+        min-width: 97vw;
+        min-height: 97vw;
+      }
+    }
+  }
+}

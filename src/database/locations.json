@@ -1,0 +1,10 @@
+[{
+    "id": 1,
+    "name": "Bogotá",
+    "flag": "bogota_flag.jpg"
+},
+{
+    "id": 2,
+    "name": "Valle del Cauca",
+    "flag": "valle_flag.jpg" 
+}]
