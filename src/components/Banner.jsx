@@ -5,7 +5,7 @@ import map from '/src/assets/icons/map.svg'
 import watch from '/src/assets/icons/watch.svg'
 import whatsapp from '/src/assets/icons/whatsapp.svg'
 import typesBD from '/src/database/types.json'
-import locationsBD from '../database/locations.json'
+import locationsBD from '/src/database/locations.json'
 
 export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPlace, date, hour }) {
 
@@ -74,12 +74,12 @@ export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPl
 
                 }}></div>
 
-                <img src={`/src/assets/backgrounds/${type.background}`} alt={type.background} className='paper' />
+                <img src={`../assets/backgrounds/${type.background}`} alt={type.background} className='paper' />
                 <img src={logo} className='logo' />
                 <h2 className='title-club'>NÓMADAS URBANOS</h2>
                 <div className='flags'>
                     <img src={colFlag} className='country' />
-                    <img src={`/src/assets/flags/${city.flag}`} alt={city.flag} className='country' />
+                    <img src={`../assets/flags/${city.flag}`} alt={city.flag} className='country' />
                 </div>
                 <div className='tags'>
                     <div className='tag tag-left'>
