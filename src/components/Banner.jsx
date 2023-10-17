@@ -12,8 +12,8 @@ export function Banner({ image, typeEvent, cityEvent, title, subtitle, meetingPl
     const type = typesBD.find(type => type.id === parseInt(typeEvent)) ?? typesBD.at(0)
     const city = locationsBD.find(location => location.id === parseInt(cityEvent)) ?? locationsBD.at(0)
 
-    const cityImage = '/assets/flags/' + city.flag
-    const typeImage = '/assets/backgrounds/' + type.background
+    const cityImage = '../../assets/flags/' + city.flag
+    const typeImage = '../../assets/backgrounds/' + type.background
 
     const upperTitle = title.toUpperCase()
     const upperSubtitle = subtitle.toUpperCase()
